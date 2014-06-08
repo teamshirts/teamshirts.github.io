@@ -1,9 +1,34 @@
 ---
-layout: default
+layout: blog
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<article class="post">
+
+    {% if page.image %}
+    <figure class="post-img">
+        <a href="#"><img src="{{ site.url }}{{ page.image }}" alt=""/></a>
+    </figure>
+    {% endif %}
+
+    <section class="date">
+        <span class="day">{{ page.date | date: "%d" }}</span>
+        <span class="month">{{ page.date | date: "%B" }}</span>
+    </section>
+
+    <section class="post-content">
+
+        <header class="meta">
+            <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+            <span><i class="halflings user"></i>By {{ page.author }}</span>
+            <span><i class="halflings tag"></i>
+                {% for tag in page.tags %}
+                    {{ tag }}
+                {% endfor %}
+            </span>
+        </header>
+
+        <div>{{ content }}</div>
+
+    </section>
+
+</article>
