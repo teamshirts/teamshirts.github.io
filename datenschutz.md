@@ -1,5 +1,5 @@
 ---
-layout: md
+layout: content
 ---
 
 Information zum Datenschutz bei Teamshirts
