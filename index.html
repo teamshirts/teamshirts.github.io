@@ -1,25 +1,125 @@
 ---
-layout: content
+layout: default
 title: Home
 ---
 
-<h1>Teamshirts</h1>
+<div class="page-content">
+    <div class="container">
 
-<p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-    rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
-</p>
 
-<h2>Todo</h2>
+        <h1>Teamshirts</h1>
 
-<ul>
-    <li>Icons austauschen, keine Lizenz</li>
-    <li>Urls prüfen</li>
-    <li>Impressum</li>
-</ul>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+            eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+            takimata
+            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+            magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea
+            rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+            dolor sit
+            amet.
+        </p>
+
+        <h2>Todo</h2>
+
+        <ul>
+            <li>Icons austauschen, keine Lizenz</li>
+            <li>Urls prüfen</li>
+            <li>Impressum</li>
+        </ul>
+
+    </div>
+</div>
+<!-- 960 Container -->
+<div class="container">
+
+    <!-- Recent News -->
+    <div class="eight columns">
+
+        <h3 class="margin-1">Neuigkeiten <span>/ aus unserem Blog</span></h3>
+
+        {% for post in site.posts offset: 0 limit: 2%}
+
+            <div class="four columns alpha" style="max-height: 125px; overflow: hidden">
+                <article class="recent-blog">
+                    <section class="date">
+                        <span class="day">{{ post.date | date: "%d" }}</span>
+                        <span class="month">{{ post.date | date: "%B" }}</span>
+                    </section>
+                    <h4><a href="{{ post.url }}">{{ post.title }}</a>
+                    </h4>
+
+                    <div>{{ post.excerpt }}</div>
+
+                </article>
+            </div>
+
+        {% endfor %}
+
+
+    </div>
+
+    <!-- Testimonials -->
+    <div class="eight columns">
+
+        <h3 class="margin-1">Testimonials <span>/ What Our Clients Say</span></h3>
+
+        <!-- Testimonial Rotator -->
+        <section class="flexslider testimonial-slider">
+            <ul class="slides">
+                <li class="testimonial">
+                    <div class="testimonials">Integer eu libero sit amet nisl vestibulum
+                        semper. Fusce costant Proin sit amet mauris odio pellentesque
+                        iaculis posuer dapibus natoque penatibus et magnis dis parturient
+                        montes.
+                    </div>
+                    <div class="testimonials-bg"></div>
+                    <div class="testimonials-author">Michael, <span>Flash Developer</span>
+                    </div>
+                </li>
+
+                <li class="testimonial">
+                    <div class="testimonials">Posuere erat a ante venenatis dapibus
+                        posuere velit aliquet. Proin sit amet mauris odio pellentesque
+                        iaculis. Cum sociis natoque penatibus et lorem magnis dis
+                        parturient montes, nascetur ridiculus mus. Duisean lorem llis
+                        noenan coeammodo luctus.
+                    </div>
+                    <div class="testimonials-bg"></div>
+                    <div class="testimonials-author">John, <span>Web Developer</span>
+                    </div>
+                </li>
+
+                <li class="testimonial">
+                    <div class="testimonials">Cras sed odio est, sit amet porttitor elit.
+                        Vestibulum Proin sit amet mauris et odio pellentesque iaculis. Cum
+                        sociis natoque proin sit amet mauris odio pellentesque iaculis.
+                    </div>
+                    <div class="testimonials-bg"></div>
+                    <div class="testimonials-author">Peter, <span>Project Manager</span>
+                    </div>
+                </li>
+
+                <li class="testimonial">
+                    <div class="testimonials">Elementum erat vitae ante venenatis dapibus.
+                        Maecenas cursus cursus Proin sit amet mauris et odio pellentesque
+                        iaculis.
+                    </div>
+                    <div class="testimonials-bg"></div>
+                    <div class="testimonials-author">Kathy, <span>Art Director</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Testomonial Rotator / End -->
+
+    </div>
+
+</div>
+<!-- 960 Container / End -->
