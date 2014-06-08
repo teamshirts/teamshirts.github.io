@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+
+<script type="text/javascript">
+    window.spreadshirtLoaded = window.spreadshirtLoaded || [];
+    window.spreadshirtLoaded.push(function (spreadshirt) {
+        spreadshirt.create("tablomat", {
+            shopId: 205909, // your shop id
+            platform: "EU",  // or NA,
+            target: document.getElementById("tablomat"),
+
+            // also independent, but for designs
+            designSearch: "{{ page.designSearch }}",
+            designUrl: "{{ page.designUrl }}",
+            designId: "{{ page.designId }}",
+            designCategoryId: "{{ page.designCategoryId }}",
+
+            // product relevant deeplinks
+            productId: "{{ page.productId }}",
+            appearanceId: "{{ page.appearanceId }}",
+            viewId: "{{ page.viewId }}",
+
+            // product type
+            productTypeId: "{{ page.productTypeId }} ",
+
+            // independent
+            departmentId: "{{ page.departmentId }}",
+            productTypeCategoryId: "{{ page.productTypeCategoryId }}",
+
+            panel: "{{ page.panel }}"
+        }, function (err, app) {
+
+            if (err) {
+                // something went wrong
+                window.console && console.log(err);
+            } else {
+                // cool I can control the application (see below)
+                window.tablomat = app;
+            }
+        });
+    });
+
+</script>
+
+<div class="page-content">
+  <div class="container">
+    {{ content }}
+  </div>
+</div>
+
+<script type="text/javascript" src="//spreadshirt.github.io/apps/spreadshirt.min.js" async="async" defer="defer"></script>
