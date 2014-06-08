@@ -1,0 +1,76 @@
+---
+layout: contact
+title: Kontakt
+---
+
+<h3 class="margin-reset">Unser Standort</h3>
+
+<br/>
+
+<!-- Google Maps -->
+<section class="google-map-container">
+
+    <div id="googlemaps" class="google-map google-map-full" style="padding-bottom:40%"></div>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="scripts/jquery.gmap.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery('#googlemaps').gMap({
+            maptype: 'ROADMAP',
+            scrollwheel: false,
+            zoom: 16,
+            markers: [
+                {
+                    address: 'sprd.net AG, Gießerstraße 27, 04229 Leipzig, Deutschland',
+                    html: '',
+                    popup: false,
+                }
+            ],
+        });
+    </script>
+</section>
+<!-- Google Maps / End -->
+
+
+<h3 class="margin">Contact Form</h3>
+<p class="margin">The simple contact form below comes packed within this theme. This HTML5
+    & AJAX contact form utilises cutting edge HMTL5 code and jQuery animations to make
+    your contact page elegant and ultra-usable.</p>
+
+<!-- Contact Form -->
+<section id="contact">
+
+    <!-- Success Message -->
+    <mark id="message"></mark>
+
+    <!-- Form -->
+    <form method="post" action="contact.php" name="contactform" id="contactform">
+
+        <fieldset>
+
+            <div>
+                <label for="name" accesskey="U">Name:</label>
+                <input name="name" type="text" id="name"/>
+            </div>
+
+            <div>
+                <label for="email" accesskey="E">Email: <span>*</span></label>
+                <input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$"/>
+            </div>
+
+            <div>
+                <label for="comments" accesskey="C">Message: <span>*</span></label>
+                <textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+            </div>
+
+        </fieldset>
+
+        <input type="submit" class="submit" id="submit" value="Send Message"/>
+
+        <div class="clearfix"></div>
+
+    </form>
+
+</section>
+<!-- Contact Form / End -->
