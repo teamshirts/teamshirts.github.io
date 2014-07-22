@@ -1,4 +1,4 @@
-teamshirts.de
+teamshirts.github.io
 =============
 
 Website for teamshirts.de
