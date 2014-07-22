@@ -61,7 +61,7 @@
     <div class="ten columns">
       <div id="logo">
         <h1><a href="#"><img src="/images/logo.png" alt="Teamshirts logo" /></a></h1>
-        <div id="tagline">T-Shirts für dein Team!</div>
+<!--        <div id="tagline">T-Shirts für dein Team!</div> -->
         <div class="clearfix"></div>
       </div>
     </div>
@@ -70,15 +70,20 @@
     <div class="six columns">
 
       <!-- Social Icons -->
-      <ul class="social-icons">
+<!--      <ul class="social-icons">
         <li class="twitter"><a href="https://twitter.com/teamshirts">Twitter</a></li>
         <li class="facebook"><a href="#">Facebook</a></li>
-      </ul>
+      </ul> -->
 
       <div class="clearfix"></div>
 
       <!-- Contact Details -->
-      <div class="contact-details"><a href="tel:+49 341 59 400 5900">Telefon: +49 341 59 400 5900</a></div>
+      <div class="contact-details">
+      	<ul>
+      		<li><a href="tel:+49 341 59 400 5900">Telefon: +49 341 59 400 5900</a></li>
+      		<li><a href="mailto:service@teamshirt.net">Email: service@teamshirt.net</a></li>
+      	
+      	</div>
 
       <div class="clearfix"></div>
 
@@ -102,8 +107,7 @@
 <ul class="menu" id="responsive">
 
   <li><a href="/" id="current"><i class="halflings white home"></i> Home</a></li>
-
-  <li><a href="#"><i class="halflings white file"></i> Teams</a>
+  <li><a href="#"><i class="halflings white user"></i> Teams</a>
     <!-- Mega Menu / Start -->
     <ul class="cols3">
       <li class="col3">
@@ -112,7 +116,7 @@
       <li class="col1">
         <h5>Sport</h5>
         <ol>
-          <li><a href="sport/handball">Handball</a></li>
+          <li><a href="sport/handball.html">Handball</a></li>
           <li><a href="flexslider.html">Fußball</a></li>
           <li><a href="pricing-tables.html">Basketball</a></li>
         </ol>
@@ -125,48 +129,13 @@
           <li><a href="left-sidebar.html">Einschulung</a></li>
         </ol>
       </li>
-      <li class="col1">
-        <h5>Paragraph</h5>
-        <p>This <a href="#">Mega Menu</a> can handle everything. Lists, paragraphs, forms...</p>
-      </li>
     </ul>
     <!-- Mega Menu / End -->
   </li>
+  <li><a href="shirtdesigner.html"><i class="halflings white edit"></i> Shirt designer</a></li>
+  <li><a href="/blog.html"><i class="halflings white pencil"></i> Blog</a></li>
 
-  <li><a href="#"><i class="halflings white cog"></i> Shortcodes</a>
-    <!-- Second Level / Start -->
-    <ul>
-      <li><a href="elements.html">Elements</a></li>
-      <li><a href="icons.html">Icons</a></li>
-      <li><a href="pricing-tables.html">Pricing Tables</a></li>
-      <li><a href="typography.html">Typography</a></li>
-    </ul>
-    <!-- Second Level / End -->
-  </li>
-
-  <li><a href="#"><i class="halflings white briefcase"></i> Portfolio</a>
-    <!-- Second Level / Start -->
-    <ul>
-      <li><a href="portfolio-2.html">2 Columns</a></li>
-      <li><a href="portfolio-3.html">3 Columns</a></li>
-      <li><a href="portfolio-4.html">4 Columns</a></li>
-      <li><a href="single-project.html">Single Project</a></li>
-    </ul>
-    <!-- Second Level / End -->
-  </li>
-  
-  <li><a href="#"><i class="halflings white shopping-cart"></i> Shop</a>
-    <!-- Second Level / Start -->
-    <ul>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="product-page.html">Product Page</a></li>
-    </ul>
-    <!-- Second Level / End -->
-  </li>
-
-  <li><a href="/blog"><i class="halflings white pencil"></i> Blog</a></li>
-
-  <li><a href="/kontakt"><i class="halflings white envelope"></i> Kontakt</a></li>
+  <li><a href="/kontakt.html"><i class="halflings white envelope"></i> About us</a></li>
 
 </ul>
 </nav>
@@ -191,14 +160,6 @@
 <footer id="footer">
   <!-- 960 Container -->
   <div class="container">
-
-    <!-- About -->
-    <div class="four columns">
-      <img id="logo-footer" src="/images/logo-footer.png" alt="" />
-      <p>Morbi gravida imperdiet rutrum fusce mattis, lectus consequat vestibulum, duinibh fermentum ligula.</p>
-
-    </div>
-
     <!-- Contact Details -->
     <div class="four columns">
       <h4>Kontakt</h4>
@@ -209,29 +170,36 @@
         <li><i class="halflings white envelope"></i> <p><strong>Email:</strong> <a href="mailto:kontakt@teamshirts.de">kontakt@teamshirts.de</a></p></li>
       </ul>
     </div>
-
-    <!-- Photo Stream -->
     <div class="four columns">
-      <h4>Photo Stream</h4>
-      <div class="flickr-widget">
-        <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-
-    <!-- Twitter -->
-    <div class="four columns">
-      <h4>Twitter</h4>
-      <ul id="twitter"></ul>
-        <script type="text/javascript">
-          jQuery(document).ready(function($){
-          $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-            $("#twitter").html(tz_format_twitter(tweets));
-          }); });
-        </script>
+      <h4>Deine Vorteile</h4>
+      <ul class="contact-details-alt">
+	      <li><i class="halflings white check"></i><p><a href="#">30 Tage Umtauschrecht</a></p></li>
+	      <li><i class="halflings white check"></i><p><a href="#">Leiferung innerhaib Deutschlands: 3-5 Werktage</a></p></li>
+	      <li><i class="halflings white check"></i><p><a href="#">Hohe Produkt- und Druckqualitat</a></p></li> 
+      </ul>
+      
       <div class="clearfix"></div>
     </div>
-
+    <div class="four columns">
+      <h4>Wir akzeptieren</h4>
+      <div id="footer_payment_methods" class="clearfix">
+		  <div class="visa" title="VISA"></div>
+		  <div class="mastercard" title="MasterCard"></div>
+		  <div class="amex" title="American Express"></div>
+		  <div class="paypal" title="PayPal"></div>
+	  </div>
+      
+      <div class="clearfix"></div>
+    </div>
+   <div class="four columns">
+      <h4>Quick links</h4>
+      <ul>
+	      <li><a href="#">FAQ's</a></li>
+	      
+	      <li><a href="#">Another link</a></li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
   </div>
   <!-- 960 Container / End -->
 
@@ -248,7 +216,7 @@
     <!-- Copyrights -->
     <div class="eight columns">
       <div class="copyright">
-        © Copyright 2013 by <a href="#">Nevia</a>. All Rights Reserved.
+        © Copyright 2014 by <a href="#">Teamshirts</a>. All Rights Reserved.
       </div>
     </div>
 

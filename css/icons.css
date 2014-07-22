@@ -21,6 +21,35 @@
   *margin-right: .3em;
 }
 
+#footer_payment_methods {
+    width: 150px;
+}
+
+#footer_payment_methods div {
+    width: 42px;
+    height: 26px;
+    float: left;
+    margin: 0px 4px 4px 0px;
+    background-image: url('http://cache.spreadshirt.com/Public/Media/footer/footer_sprite_all.png');
+	background-repeat: no-repeat;
+}
+.visa {
+    background-position: -42px 0px;
+}
+
+.mastercard {
+    background-position: -84px 0px;
+}
+
+.amex {
+    background-position: -126px 0px;
+}
+
+.paypal {
+    background-position: -546px 0px;
+    width: 57px;
+}
+
 .ie8 .halflings {
   background-image: url(../images/glyphicons_halflings.png);
  }
